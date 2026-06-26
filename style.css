@@ -1,0 +1,1027 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(-45deg,#6a11cb,#2575fc,#00c6ff,#6a11cb);
+    background-size:400% 400%;
+    animation:bgAnimation 15s ease infinite;
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+    transition:.4s;
+}
+
+@keyframes bgAnimation{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* ===========================
+   FLOATING BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.background span{
+    position:absolute;
+    display:block;
+    width:25px;
+    height:25px;
+    background:rgba(255,255,255,.15);
+    border-radius:50%;
+    animation:float 20s linear infinite;
+    bottom:-150px;
+}
+
+.background span:nth-child(1){
+    left:10%;
+    width:80px;
+    height:80px;
+    animation-duration:18s;
+}
+
+.background span:nth-child(2){
+    left:30%;
+    animation-duration:12s;
+}
+
+.background span:nth-child(3){
+    left:50%;
+    width:60px;
+    height:60px;
+    animation-duration:16s;
+}
+
+.background span:nth-child(4){
+    left:70%;
+    animation-duration:22s;
+}
+
+.background span:nth-child(5){
+    left:90%;
+    width:90px;
+    height:90px;
+    animation-duration:25s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    animation:slideDown 1s;
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        transform:translateY(-100px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+header h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+header p{
+
+    margin-top:5px;
+
+    color:#f8f8f8;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+#clock{
+
+    font-size:18px;
+
+}
+
+#themeBtn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.4s;
+
+}
+
+#themeBtn:hover{
+
+    transform:rotate(180deg);
+
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+
+    width:90%;
+
+    margin:35px auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
+
+    animation:fadeUp 1s;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    resize:none;
+
+    height:120px;
+
+}
+
+#addTask{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#00c853;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+#addTask:hover{
+
+    transform:scale(1.05);
+
+    background:#00b248;
+
+}
+
+/* ===========================
+   STATISTICS
+=========================== */
+
+.stats .box{
+
+    background:rgba(255,255,255,.15);
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+.stats h1{
+
+    font-size:40px;
+
+    margin-top:10px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:20px;
+
+    background:#ddd;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+#progressBar{
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#00e676,#00c853);
+
+    transition:width .8s;
+
+}
+/* ===========================
+   CONTROLS
+=========================== */
+
+.controls{
+    width:90%;
+    margin:20px auto;
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.controls input{
+    flex:2;
+}
+
+.controls select{
+    flex:1;
+}
+
+#clearAll{
+    padding:14px 20px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#ff3b3b;
+    color:#fff;
+    font-size:16px;
+    transition:.4s;
+}
+
+#clearAll:hover{
+    background:#d62828;
+    transform:scale(1.05);
+}
+
+/* ===========================
+   TASK CONTAINER
+=========================== */
+
+#taskContainer{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+/* ===========================
+   TASK CARD
+=========================== */
+
+.task{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    transition:.4s;
+    animation:cardAnimation .8s;
+}
+
+@keyframes cardAnimation{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+.task:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.task h3{
+
+    margin-bottom:10px;
+
+    font-size:22px;
+
+}
+
+.task p{
+
+    margin:10px 0;
+
+    line-height:1.5;
+
+}
+
+/* ===========================
+   PRIORITY BADGES
+=========================== */
+
+.priority{
+
+    display:inline-block;
+
+    padding:7px 15px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    color:#fff;
+
+    margin-top:10px;
+
+}
+
+.high{
+
+    background:#ff1744;
+
+}
+
+.medium{
+
+    background:#ff9800;
+
+}
+
+.low{
+
+    background:#00c853;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.buttons button{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.complete{
+
+    background:#00c853;
+
+}
+
+.edit{
+
+    background:#2196f3;
+
+}
+
+.delete{
+
+    background:#f44336;
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.buttons button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ===========================
+   COMPLETED TASK
+=========================== */
+
+.completed{
+
+    opacity:.65;
+
+    text-decoration:line-through;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+}
+
+footer p{
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark{
+
+    background:#121212;
+
+}
+
+body.dark .card,
+body.dark .task,
+body.dark header,
+body.dark footer{
+
+    background:#1f1f1f;
+
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+
+    background:#2a2a2a;
+
+    color:#fff;
+
+}
+
+body.dark #themeBtn{
+
+    background:#333;
+
+    color:#fff;
+
+}
+
+body.dark .stats .box{
+
+    background:#2d2d2d;
+
+}
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:1024px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.right{
+
+order:-1;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.header-right{
+
+flex-direction:column;
+
+}
+
+.controls{
+
+flex-direction:column;
+
+}
+
+.controls input,
+.controls select,
+#clearAll{
+
+width:100%;
+
+}
+
+#taskContainer{
+
+grid-template-columns:1fr;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+header h1{
+
+font-size:28px;
+
+}
+
+.stats h1{
+
+font-size:32px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.container{
+
+width:95%;
+
+}
+
+.controls{
+
+width:95%;
+
+}
+
+#taskContainer{
+
+width:95%;
+
+}
+
+.task{
+
+padding:18px;
+
+}
+
+.task h3{
+
+font-size:20px;
+
+}
+
+header{
+
+padding:20px;
+
+}
+
+}
+
+/* ===========================
+   INPUT ANIMATION
+=========================== */
+
+input,
+textarea,
+select{
+
+transition:.3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+transform:scale(1.02);
+
+box-shadow:0 0 10px rgba(255,255,255,.5);
+
+}
+
+/* ===========================
+   BUTTON EFFECT
+=========================== */
+
+button{
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+}
+
+button:active{
+
+transform:scale(.95);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ddd;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#2575fc;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#6a11cb;
+
+}
+
+/* ===========================
+   ICON ANIMATION
+=========================== */
+
+.fa-list-check{
+
+animation:rotateIcon 4s linear infinite;
+
+}
+
+@keyframes rotateIcon{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===========================
+   GLOW EFFECT
+=========================== */
+
+.card:hover{
+
+box-shadow:0 0 25px rgba(255,255,255,.35);
+
+}
+
+.task:hover{
+
+box-shadow:0 0 25px rgba(255,255,255,.25);
+
+}
+
+/* ===========================
+   FLOATING ANIMATION
+=========================== */
+
+.card{
+
+animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   FADE IN
+=========================== */
+
+#taskContainer{
+
+animation:fadeIn .8s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ===========================
+   GLASS EFFECT
+=========================== */
+
+.card,
+.task,
+header,
+footer{
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+   SHADOW
+=========================== */
+
+.card{
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.task{
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+::selection{
+
+background:#00c853;
+
+color:white;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+font-size:15px;
+
+letter-spacing:1px;
+
+}
+
+footer p{
+
+opacity:.9;
+
+}
+
+/* ===========================
+   END
+=========================== */

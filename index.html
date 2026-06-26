@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Task Manager Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+
+    <div class="background">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- Header -->
+
+    <header>
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-list-check"></i>
+
+                Smart Task Manager Pro
+
+            </h1>
+
+            <p id="greeting"></p>
+
+        </div>
+
+        <div class="header-right">
+
+            <h3 id="clock"></h3>
+
+            <button id="themeBtn">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <!-- Left Section -->
+
+        <div class="left">
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-plus"></i>
+
+                    Add New Task
+
+                </h2>
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Task Title">
+
+                <textarea
+                    id="description"
+                    placeholder="Task Description"></textarea>
+
+                <select id="priority">
+
+                    <option value="High">
+
+                        High Priority
+
+                    </option>
+
+                    <option value="Medium">
+
+                        Medium Priority
+
+                    </option>
+
+                    <option value="Low">
+
+                        Low Priority
+
+                    </option>
+
+                </select>
+
+                <select id="category">
+
+                    <option value="Study">
+
+                        Study
+
+                    </option>
+
+                    <option value="Work">
+
+                        Work
+
+                    </option>
+
+                    <option value="Personal">
+
+                        Personal
+
+                    </option>
+
+                    <option value="Shopping">
+
+                        Shopping
+
+                    </option>
+
+                </select>
+
+                <input
+                    type="date"
+                    id="dueDate">
+
+                <button id="addTask">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Task
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Right Section -->
+
+        <div class="right">
+
+            <div class="card stats">
+
+                <h2>
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    Dashboard
+
+                </h2>
+
+                <div class="box">
+
+                    <p>Total Tasks</p>
+
+                    <h1 id="totalTask">
+
+                        0
+
+                    </h1>
+
+                </div>
+
+                <div class="box">
+
+                    <p>Completed</p>
+
+                    <h1 id="completedTask">
+
+                        0
+
+                    </h1>
+
+                </div>
+
+                <div class="box">
+
+                    <p>Pending</p>
+
+                    <h1 id="pendingTask">
+
+                        0
+
+                    </h1>
+
+                </div>
+
+                <div class="progress">
+
+                    <div id="progressBar"></div>
+
+                </div>
+
+                <h3 id="percent">
+
+                    0% Completed
+
+                </h3>
+
+                <h4 id="taskCount">
+
+                    You have 0 Tasks
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Task...">
+
+        <select id="filter">
+
+            <option value="all">
+
+                All Tasks
+
+            </option>
+
+            <option value="completed">
+
+                Completed
+
+            </option>
+
+            <option value="pending">
+
+                Pending
+
+            </option>
+
+        </select>
+
+        <button id="clearAll">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear All
+
+        </button>
+
+    </div>
+
+    <!-- Tasks -->
+
+    <div id="taskContainer">
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            Designed with ❤️ using HTML • CSS • JavaScript
+
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
